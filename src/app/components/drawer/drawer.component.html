@@ -1,6 +1,11 @@
-<app-drawer-inner [isOpen]="isDrawerOpen" (onClose)="close()">
-  <div class="drawer-wrapper">
-    <ng-content></ng-content>
+<app-drawer-inner [isOpen]="isDrawerOpen" [width]="width" [position]="position">
+  <app-button class="btn-toggler" (click)="toggleDrawer()" toggler
+    >🍔</app-button
+  >
+  <div class="drawer-wrapper-head" head>
+    <ng-content select="[header]"></ng-content>
+  </div>
+  <div class="drawer-wrapper-body" body>
+    <ng-content select="[body]"></ng-content>
   </div>
 </app-drawer-inner>
-<button (click)="toggleDrawer()">OPEN</button>

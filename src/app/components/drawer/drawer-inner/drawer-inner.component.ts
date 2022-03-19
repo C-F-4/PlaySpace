@@ -6,18 +6,13 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./drawer-inner.component.scss'],
 })
 export class DrawerInnerComponent implements OnInit {
-  @Input() isOpen: boolean = false;
-  @Input() width: number = 400;
-  @Input() position: 'left' | 'right' = 'right';
-  @Output() onClose = new EventEmitter();
+  @Input() isOpen: boolean;
+  @Input() width: number;
+  @Input() position: 'left' | 'right';
 
   constructor() {}
 
   ngOnInit() {}
-
-  close() {
-    this.onClose.emit();
-  }
 
   get drawerStyles() {
     const commonStyles = { width: `${this.width}px` };

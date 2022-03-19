@@ -1,0 +1,29 @@
+.btn {
+  padding: 5px 10px;
+  background: #eee;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  color: #333;
+  outline: none;
+
+  &:hover:not(:disabled) {
+    cursor: pointer;
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+
+  &.primary {
+    background: rgb(110, 41, 110);
+    border-color: rgb(110, 41, 110);
+    color: white;
+  }
+
+  &.outline {
+    border: rgb(110, 41, 110);
+    background: white;
+    color: rgb(110, 41, 110);
+  }
+}

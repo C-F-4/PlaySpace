@@ -6,6 +6,9 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./drawer.component.scss'],
 })
 export class DrawerComponent implements OnInit {
+  @Input() width: number = 400;
+  @Input() position: 'left' | 'right' = 'right';
+  @Output() onOpen = new EventEmitter();
   @Output() onClose = new EventEmitter();
 
   isDrawerOpen: boolean = false;
@@ -14,16 +17,13 @@ export class DrawerComponent implements OnInit {
 
   ngOnInit() {}
 
-  close() {
-    this.isDrawerOpen = false;
-    this.onClose.emit();
-  }
-
   toggleDrawer() {
     if (this.isDrawerOpen) {
-      this.close();
+      this.isDrawerOpen = false;
+      this.onClose.emit();
     } else {
       this.isDrawerOpen = true;
+      this.onOpen.emit();
     }
   }
 }

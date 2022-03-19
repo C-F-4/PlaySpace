@@ -6,7 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  open() {
+    console.log('Drawer opened');
+  }
+
   close() {
-    console.log('Drawer');
+    console.log('Drawer closed');
   }
 }
