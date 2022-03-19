@@ -1,4 +1,9 @@
-<app-drawer [isOpen]="isDrawerOpen" (onClose)="isDrawerOpen = false">
+<app-drawer (onClose)="close()">
+  <div class="header">
+    <h5>Responses</h5>
+  </div>
+  <div class="body">
+    <p>Loved the article</p>
+  </div>
 </app-drawer>
-<button (click)="isDrawerOpen = !isDrawerOpen">OPEN</button>
 <p>Start editing to see some magic happen :)</p>

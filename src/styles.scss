@@ -1,0 +1,10 @@
+/* Add application styles & imports to this file! */
+$bg-primary: #333;
+
+$font-primary: #eee;
+
+body {
+  overflow: hidden;
+  background: $bg-primary;
+  color: $font-primary;
+}

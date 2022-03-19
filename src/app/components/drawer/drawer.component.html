@@ -1,9 +1,6 @@
-<div class="drawer-container" [style.right.px]="isOpen ? 0 : -400">
-  <button class="close" (click)="close()">X</button>
-  <div class="header">
-    <h5>Responses</h5>
+<app-drawer-inner [isOpen]="isDrawerOpen" (onClose)="close()">
+  <div class="drawer-wrapper">
+    <ng-content></ng-content>
   </div>
-  <div class="body">
-    <p>Loved the article</p>
-  </div>
-</div>
+</app-drawer-inner>
+<button (click)="toggleDrawer()">OPEN</button>
