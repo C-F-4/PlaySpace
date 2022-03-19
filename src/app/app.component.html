@@ -1,4 +1,4 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<app-drawer [isOpen]="isDrawerOpen" (onClose)="isDrawerOpen = false">
+</app-drawer>
+<button (click)="isDrawerOpen = !isDrawerOpen">OPEN</button>
+<p>Start editing to see some magic happen :)</p>
